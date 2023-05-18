@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import AddCard from './forms/AddCard';
 import CardTable from './tables/CardTable';
 
 function App() {
@@ -8,7 +9,13 @@ function App() {
     {id: 3, question: "Who is credited for inventing the first computer?", answer: "Charles Babbage"}
   ]
 
-  const [cards, setCard] = useState(sampleCards);
+  const [cards, setCards] = useState(sampleCards);
+
+  const addCard = (card) => {
+    card.id = cards.length + 1;
+    setCards([...cards, card]);
+  }
+
 
   return (
     <div className="container">
@@ -20,6 +27,7 @@ function App() {
       </div>
       <div className="options">
         <h2>Card Options</h2>
+        <AddCard addCard={addCard} />
         <CardTable cards={cards}/>
       </div>
     </div>

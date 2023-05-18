@@ -15,6 +15,7 @@ const AddCard = (props) => {
                 event.preventDefault();
                 if (!card.question || !card.answer) return
                 
+                props.addCard(card);
                 setCard(initialState);
             }}
         >
