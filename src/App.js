@@ -12,10 +12,11 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Flashcards</h1>
+      <h1>Flashcards Study Demo</h1>
       <div className="cards">
         {/* Cards render here */}
         {/* Reset and shuffle buttons */}
+        <h2>Deck</h2>
       </div>
       <div className="options">
         <h2>Card Options</h2>
