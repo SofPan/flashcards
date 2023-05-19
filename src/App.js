@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import AddCard from './forms/AddCard';
 import EditCard from './forms/EditCard';
 import CardTable from './tables/CardTable';
+import Card from './cards/Card';
 
 function App() {
   const cardArr = [
@@ -45,9 +46,9 @@ function App() {
     <div className="container">
       <h1>Flashcards Study Demo</h1>
       <div className="cards">
-        {/* Cards render here */}
-        {/* Reset and shuffle buttons */}
         <h2>Deck</h2>
+        <Card cardArr={cardArr} />
+        {/* Reset and shuffle buttons */}
       </div>
       <div className="options">
         <h2>Card Options</h2>
