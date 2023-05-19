@@ -16,6 +16,11 @@
     padding: 5px;
     border: none;
     margin: 10px;
+    border: 1px solid transparent;
+}
+
+.btnFlip:hover{
+    background-color: transparent;
 }
 
 .flipIcon{
@@ -24,11 +29,27 @@
     width: 20px;
     height: 20px;
     margin: 0 auto;
+    transition: all 200ms ease;
+}
+
+.btnFlip:hover .flipIcon{
+    background-image: url("../assets/share-solid-hover.svg");
 }
 
 .cardText{
     height: 60%;
-    padding: 50px;
+    padding-top: 36px;
+    text-align: center;
+}
+
+h3{
+    font-size: 22px;
+    line-height: 30px;
+}
+
+p{
+    font-style: italic;
+    font-size: 20px;
 }
 
 .btnContainer{
@@ -39,5 +60,5 @@
     border-top: 1px solid navy;
     background-color: white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
 }

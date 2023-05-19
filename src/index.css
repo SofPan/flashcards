@@ -47,9 +47,16 @@ main{
 }
 
 button{
-  background: transparent;
+  background-color: transparent;
   border: 2px solid navy;
   border-radius: 5px;
   padding: 5px 15px;
   color: navy;
+  transition: all 250ms ease;
+}
+
+button:hover{
+  background-color: navy;
+  color: white;
+  cursor: pointer;
 }
