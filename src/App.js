@@ -17,6 +17,8 @@ function App() {
   const initialState = {id: null, question:'', answer:''};
   const [currentCard, setCurrentCard] = useState(initialState);
 
+  const [showing, setShowing] = useState(cardArr[0]);
+
   const addCard = (card) => {
     if(cards.length < 10){
       card.id = cards.length + 1;
@@ -42,12 +44,20 @@ function App() {
     setCards(cards.map((card) => (card.id === id ? updatedCard : card)));
   }
 
+  const showCard = (id, shownCard) => {
+    setShowing(cards.map((card) => (card.id === id ? shownCard : card)));
+  }
+
   return (
     <div className="container">
       <h1>Flashcards Study Demo</h1>
       <div className="cards">
         <h2>Deck</h2>
-        <Card cardArr={cardArr} />
+        <Card 
+          showing={showing}
+          showCard={showCard} 
+          cards={cards}
+        />
         {/* Reset and shuffle buttons */}
       </div>
       <div className="options">

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 const Card = (props) => {
     const [showAnswer, setShowAnswer] = useState(false);
-    const [currentCard, setCurrentCard] = useState(props.cardArr[0]);
+    const [currentCard, setCurrentCard] = useState(props.showing);
 
 
     return(
@@ -16,6 +16,10 @@ const Card = (props) => {
                 ) : (
                     <h3>{currentCard.question}</h3>
                 )}
+            </div>
+            <div>
+                <button>Prev</button>
+                <button>Next</button>
             </div>
         </div>
     )
