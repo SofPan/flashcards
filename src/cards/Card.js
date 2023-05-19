@@ -1,16 +1,18 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 const Card = (props) => {
     const [showAnswer, setShowAnswer] = useState(false);
     const [currentCard, setCurrentCard] = useState(props.showing);
+
+
     const handlePrev = (event) => {
         event.preventDefault();
         const newId = currentCard.id - 1;
-        if (newId <= 1){
+        if (newId < 0){
             alert('there is no previous card');
             setCurrentCard(currentCard);
         }
-        setCurrentCard(props.cards.map((card) => (card.id === newId)));
+        props.showCard(newId);
     }
 
     const handleNext = (event) => {
@@ -20,8 +22,12 @@ const Card = (props) => {
             alert('there is no next card');
             setCurrentCard(currentCard);
         }
-        setCurrentCard(props.cards.id === newId);
+        props.showCard(newId);
     }
+    
+    useEffect(() => {
+        setCurrentCard(props.showing);
+    }, [props])
 
     return(
         <div className="flashcard">

@@ -6,9 +6,9 @@ import Card from './cards/Card';
 
 function App() {
   const cardArr = [
-    {id: 1, question: "What is the capital of France?", answer: "Paris"},
-    {id: 2, question: "What is Canada's national sport?", answer: "Lacrosse"},
-    {id: 3, question: "Who is credited for inventing the first computer?", answer: "Charles Babbage"}
+    {id: 0, question: "What is the capital of France?", answer: "Paris"},
+    {id: 1, question: "What is Canada's national sport?", answer: "Lacrosse"},
+    {id: 2, question: "Who is credited for inventing the first computer?", answer: "Charles Babbage"}
   ]
 
   const [cards, setCards] = useState(cardArr);
@@ -44,8 +44,9 @@ function App() {
     setCards(cards.map((card) => (card.id === id ? updatedCard : card)));
   }
 
-  const showCard = (id, shownCard) => {
-    setShowing(cards.map((card) => (card.id === id ? shownCard : card)));
+  const showCard = (id) => {
+    console.log('the new card should be: ', cardArr[id]);
+    setShowing(cardArr[id]);
   }
 
   return (
