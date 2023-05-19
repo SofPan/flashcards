@@ -15,7 +15,13 @@ const CardTable = (props) => {
                         <tr key={card.id}>
                             <td>{card.question}</td>
                             <td>
-                            <button>Edit</button>
+                                <button
+                                    onClick={() => {
+                                        props.editCard(card)
+                                    }}
+                                >
+                                    Edit
+                                </button>
                                 <button
                                     onClick={() => props.deleteCard(card.id)}
                                 >

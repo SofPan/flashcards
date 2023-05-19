@@ -51,7 +51,7 @@ function App() {
           ) : (
           <AddCard addCard={addCard} />
         )}
-        <CardTable cards={cards} deleteCard={deleteCard} />
+        <CardTable cards={cards} deleteCard={deleteCard} editCard={editCard} />
 
       </div>
     </div>
