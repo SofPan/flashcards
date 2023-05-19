@@ -45,36 +45,37 @@ function App() {
   }
 
   const showCard = (id) => {
-    console.log('the new card should be: ', cardArr[id]);
     setShowing(cardArr[id]);
   }
 
   return (
-    <div className="container">
+    <main>
       <h1>Flashcards Study Demo</h1>
-      <div className="cards">
-        <h2>Deck</h2>
-        <Card 
-          showing={showing}
-          showCard={showCard} 
-          cards={cards}
-        />
-      </div>
-      <div className="options">
-        <h2>Card Options</h2>
-          {editing ? (
-            <EditCard 
-              currentCard={currentCard}
-              setEditing={setEditing}
-              updateCard={updateCard}
-            />
-          ) : (
-          <AddCard addCard={addCard} />
-        )}
-        <CardTable cards={cards} deleteCard={deleteCard} editCard={editCard} />
+      <div className="main-container flex">
+        <div className="inner cards-container flex">
+          <h2>Deck</h2>
+          <Card 
+            showing={showing}
+            showCard={showCard} 
+            cards={cards}
+          />
+        </div>
+        <div className="inner options-container">
+          <h2>Card Options</h2>
+            {editing ? (
+              <EditCard 
+                currentCard={currentCard}
+                setEditing={setEditing}
+                updateCard={updateCard}
+              />
+            ) : (
+            <AddCard addCard={addCard} />
+          )}
+          <CardTable cards={cards} deleteCard={deleteCard} editCard={editCard} />
 
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
 

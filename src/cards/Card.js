@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import styles from "./Card.styles.module.css";
 
 const Card = (props) => {
     const [showAnswer, setShowAnswer] = useState(false);
@@ -31,8 +32,8 @@ const Card = (props) => {
 
     return(
         <div className="flashcard">
-            <button onClick={() => setShowAnswer(!showAnswer)}>
-                <span className="flip"></span>
+            <button className="btn-flip" onClick={() => setShowAnswer(!showAnswer)}>
+                <span className="flip-icon"></span>
             </button>
             <div>
                 {showAnswer ? (

@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+main{
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.flex{
+  display: flex;
+}
+
+.main-container{
+  width: 100%;
+  justify-content: space-between;
+  height: 90%;
+}
+
+.cards-container{
+  flex-direction: column;
+  max-width: 700px;
+  width: 60%;
+  margin-right: 20px;
+}
+
+.options-container{
+  max-width: 460px;
+  width: 40%;
+}
+
+.inner{
+  max-height: 100%;
+  padding: 25px;
+  border: 1px solid grey;
+}
+
+button{
+  background: transparent;
+  border: 2px solid navy;
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: navy;
+}
