@@ -34,6 +34,12 @@ function App() {
     setCurrentCard({id: card.id, question: card.question, answer: card.answer});
   }
 
+  const updateCard = (id, updatedCard) => {
+    setEditing(false);
+
+    setCards(cards.map((card) => (card.id === id ? updateCard : card)));
+  }
+
   return (
     <div className="container">
       <h1>Flashcards Study Demo</h1>
@@ -47,6 +53,8 @@ function App() {
           {editing ? (
             <EditCard 
               currentCard={currentCard}
+              setEditing={setEditing}
+              updateCard={updateCard}
             />
           ) : (
           <AddCard addCard={addCard} />

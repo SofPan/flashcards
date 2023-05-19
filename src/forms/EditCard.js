@@ -14,6 +14,7 @@ const EditCard = (props) => {
             onSubmit={event => {
                 event.preventDefault();
                 
+                props.updateCard(card.id, card);
             }}
         >
             <label>Question</label>
