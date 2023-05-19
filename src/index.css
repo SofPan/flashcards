@@ -65,3 +65,23 @@ button:hover{
   color: #fff;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 800px){
+  .main-container{
+    flex-direction: column;
+    height: 150vh;
+    max-height: unset;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .cards-container{
+    border-right: 0;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  
+  .inner{
+    height: 50%;
+    width: 100%
+  }
+}
