@@ -3,7 +3,6 @@ import React, {useState} from "react";
 const Card = (props) => {
     const [showAnswer, setShowAnswer] = useState(false);
     const [currentCard, setCurrentCard] = useState(props.showing);
-
     const handlePrev = (event) => {
         event.preventDefault();
         const newId = currentCard.id - 1;
@@ -17,11 +16,11 @@ const Card = (props) => {
     const handleNext = (event) => {
         event.preventDefault();
         const newId = currentCard.id + 1;
-        if (newId >= props.cards.length - 1){
+        if (newId >= props.cards.length){
             alert('there is no next card');
             setCurrentCard(currentCard);
         }
-        setCurrentCard(props.cards.map((card) => (card.id === newId)));
+        setCurrentCard(props.cards.id === newId);
     }
 
     return(
