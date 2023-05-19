@@ -26,6 +26,7 @@ function App() {
   }
 
   const deleteCard = (id) => {
+    setEditing(false);
     setCards(cards.filter((card) => card.id !== id));
   }
 
