@@ -59,7 +59,6 @@ function App() {
           showCard={showCard} 
           cards={cards}
         />
-        {/* Reset and shuffle buttons */}
       </div>
       <div className="options">
         <h2>Card Options</h2>
