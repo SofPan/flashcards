@@ -12,8 +12,12 @@ function App() {
   const [cards, setCards] = useState(sampleCards);
 
   const addCard = (card) => {
-    card.id = cards.length + 1;
-    setCards([...cards, card]);
+    if(cards.length < 10){
+      card.id = cards.length + 1;
+      setCards([...cards, card]);
+    } else {
+      alert('10 card limit for demo version');
+    }
   }
 
 
