@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import AddCard from './forms/AddCard';
+import EditCard from './forms/EditCard';
 import CardTable from './tables/CardTable';
 
 function App() {
@@ -10,6 +11,10 @@ function App() {
   ]
 
   const [cards, setCards] = useState(cardArr);
+  const [editing, setEditing] = useState(false);
+
+  const initialState = {id: null, question:'', answer:''};
+  const [currentCard, setCurrentCard] = useState(initialState);
 
   const addCard = (card) => {
     if(cards.length < 10){
@@ -24,6 +29,10 @@ function App() {
     setCards(cards.filter((card) => card.id !== id));
   }
 
+  const editCard = (card) => {
+    setEditing(true);
+    setCurrentCard({id: card.id, question: card.question, answer: card.answer});
+  }
 
   return (
     <div className="container">
@@ -35,8 +44,15 @@ function App() {
       </div>
       <div className="options">
         <h2>Card Options</h2>
-        <AddCard addCard={addCard} />
+          {editing ? (
+            <EditCard 
+              currentCard={currentCard}
+            />
+          ) : (
+          <AddCard addCard={addCard} />
+        )}
         <CardTable cards={cards} deleteCard={deleteCard} />
+
       </div>
     </div>
   );
