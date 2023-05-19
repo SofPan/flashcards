@@ -1,0 +1,18 @@
+label,
+input{
+    display: block;
+    margin-bottom: 12px;
+}
+form > div{
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.divBlock{
+    display: block;
+}
+
+form button{
+    margin-top: 12px;
+    margin-right: 12px;
+}
