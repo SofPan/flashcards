@@ -14,10 +14,10 @@ const CardTable = (props) => {
                 {props.cards.length > 0 ? (
                     props.cards.map((card) => (
                         <tr key={card.id}>
-                            <td className={styles.w60}>
+                            <td>
                                 <p>{card.question}</p>
                             </td>
-                            <td className={styles.w40}>
+                            <td>
                                 <button
                                     onClick={() => {
                                         props.editCard(card)

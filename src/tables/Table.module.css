@@ -1,6 +1,7 @@
 thead th{
     padding-bottom: 15px;
     padding-top: 15px;
+    text-align: left;
 }
 
 tbody button{
@@ -9,12 +10,4 @@ tbody button{
 
 tbody p{
     font-size: 14px;
-}
-
-.w60{
-    width: 60%;
-}
-
-.w40{
-    width: 40%;
 }
