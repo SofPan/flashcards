@@ -1,0 +1,20 @@
+thead th{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+tbody button{
+    margin-right: 10px;
+}
+
+tbody p{
+    font-size: 14px;
+}
+
+.w60{
+    width: 60%;
+}
+
+.w40{
+    width: 40%;
+}

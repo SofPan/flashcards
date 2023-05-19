@@ -1,0 +1,43 @@
+.flashcard{
+    height: 80%;
+    width: 45%;
+    border: 1px solid navy;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 0 grey;
+    background-color: lightgrey;
+}
+
+.btnFlip{
+    max-width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    padding: 5px;
+    border: none;
+    margin: 10px;
+}
+
+.flipIcon{
+    background-image: url("../assets/share-solid.svg");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.cardText{
+    height: 60%;
+    padding: 50px;
+}
+
+.btnContainer{
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid navy;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}

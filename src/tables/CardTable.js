@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import styles from './Table.module.css';
 
 const CardTable = (props) => {
     return(
@@ -13,8 +14,10 @@ const CardTable = (props) => {
                 {props.cards.length > 0 ? (
                     props.cards.map((card) => (
                         <tr key={card.id}>
-                            <td>{card.question}</td>
-                            <td>
+                            <td className={styles.w60}>
+                                <p>{card.question}</p>
+                            </td>
+                            <td className={styles.w40}>
                                 <button
                                     onClick={() => {
                                         props.editCard(card)

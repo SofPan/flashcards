@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import styles from "./Card.styles.module.css";
+import styles from "./Card.module.css";
 
 const Card = (props) => {
     const [showAnswer, setShowAnswer] = useState(false);
@@ -31,18 +31,18 @@ const Card = (props) => {
     }, [props])
 
     return(
-        <div className="flashcard">
-            <button className="btn-flip" onClick={() => setShowAnswer(!showAnswer)}>
-                <span className="flip-icon"></span>
+        <div className={styles.flashcard}>
+            <button className={styles.btnFlip} onClick={() => setShowAnswer(!showAnswer)}>
+                <div className={styles.flipIcon}></div>
             </button>
-            <div>
+            <div className={styles.cardText}>
                 {showAnswer ? (
-                    <p className="card-answer">{currentCard.answer}</p>
+                        <p>{currentCard.answer}</p>
                 ) : (
-                    <h3>{currentCard.question}</h3>
+                        <h3>{currentCard.question}</h3>
                 )}
             </div>
-            <div>
+            <div className={styles.btnContainer}>
                 <button onClick={handlePrev}>Prev</button>
                 <button onClick={handleNext}>Next</button>
             </div>
