@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 const EditCard = (props) => {
     const [card, setCard] = useState(props.currentCard);
@@ -8,6 +8,10 @@ const EditCard = (props) => {
 
         setCard({...card, [name]: value});
     }
+
+    useEffect(() => {
+        setCard(props.currentCard);
+    }, [props])
 
     return(
         <form

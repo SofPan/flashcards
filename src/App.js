@@ -37,7 +37,7 @@ function App() {
   const updateCard = (id, updatedCard) => {
     setEditing(false);
 
-    setCards(cards.map((card) => (card.id === id ? updateCard : card)));
+    setCards(cards.map((card) => (card.id === id ? updatedCard : card)));
   }
 
   return (
