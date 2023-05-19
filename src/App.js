@@ -3,13 +3,13 @@ import AddCard from './forms/AddCard';
 import CardTable from './tables/CardTable';
 
 function App() {
-  const sampleCards = [
+  const cardArr = [
     {id: 1, question: "What is the capital of France?", answer: "Paris"},
     {id: 2, question: "What is Canada's national sport?", answer: "Lacrosse"},
     {id: 3, question: "Who is credited for inventing the first computer?", answer: "Charles Babbage"}
   ]
 
-  const [cards, setCards] = useState(sampleCards);
+  const [cards, setCards] = useState(cardArr);
 
   const addCard = (card) => {
     if(cards.length < 10){
@@ -18,6 +18,10 @@ function App() {
     } else {
       alert('10 card limit for demo version');
     }
+  }
+
+  const deleteCard = (id) => {
+    setCards(cards.filter((card) => card.id !== id));
   }
 
 
@@ -32,7 +36,7 @@ function App() {
       <div className="options">
         <h2>Card Options</h2>
         <AddCard addCard={addCard} />
-        <CardTable cards={cards}/>
+        <CardTable cards={cards} deleteCard={deleteCard} />
       </div>
     </div>
   );

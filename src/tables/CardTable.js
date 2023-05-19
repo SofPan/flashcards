@@ -14,11 +14,17 @@ const CardTable = (props) => {
                     props.cards.map((card) => (
                         <tr key={card.id}>
                             <td>{card.question}</td>
+                            <td>
                             <button>Edit</button>
-                            <button>Delete</button>
+                                <button
+                                    onClick={() => props.deleteCard(card.id)}
+                                >
+                                    Delete
+                                </button>
+                            </td>
                         </tr>
                     ))
-                ) : props.cards.length === 0 (
+                ) : (
                     <tr>
                         <td colSpan={3}>No Cards</td>
                     </tr>
