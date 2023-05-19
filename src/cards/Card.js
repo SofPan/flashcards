@@ -12,8 +12,9 @@ const Card = (props) => {
         if (newId < 0){
             alert('there is no previous card');
             setCurrentCard(currentCard);
+        } else {
+            props.showCard(newId);
         }
-        props.showCard(newId);
     }
 
     const handleNext = (event) => {
@@ -22,8 +23,9 @@ const Card = (props) => {
         if (newId >= props.cards.length){
             alert('there is no next card');
             setCurrentCard(currentCard);
+        } else {
+            props.showCard(newId);
         }
-        props.showCard(newId);
     }
     
     useEffect(() => {
