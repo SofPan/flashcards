@@ -66,6 +66,24 @@ button:hover{
   cursor: pointer;
 }
 
+footer{
+  background-color: #d8d8d8;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+
+footer p{
+  font-style: normal;
+}
+
+footer a{
+  text-decoration: none;
+  color: #2c4d75;
+  font-weight: 500;
+}
+
 @media only screen and (max-width: 800px){
   .main-container{
     flex-direction: column;

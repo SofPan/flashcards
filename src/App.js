@@ -49,33 +49,39 @@ function App() {
   }
 
   return (
-    <main>
-      <h1>Flashcards Study Demo</h1>
-      <div className="main-container flex">
-        <div className="inner cards-container flex">
-          <h2>Deck</h2>
-          <Card 
-            showing={showing}
-            showCard={showCard} 
-            cards={cards}
-          />
-        </div>
-        <div className="inner options-container">
-          <h2>Card Options</h2>
-            {editing ? (
-              <EditCard 
-                currentCard={currentCard}
-                setEditing={setEditing}
-                updateCard={updateCard}
-              />
-            ) : (
-            <AddCard addCard={addCard} />
-          )}
-          <CardTable cards={cards} deleteCard={deleteCard} editCard={editCard} />
+    <>
+      <main>
+        <h1>Flashcards Study Demo</h1>
+        <div className="main-container flex">
+          <div className="inner cards-container flex">
+            <h2>Deck</h2>
+            <Card 
+              showing={showing}
+              showCard={showCard} 
+              cards={cards}
+            />
+          </div>
+          <div className="inner options-container">
+            <h2>Card Options</h2>
+              {editing ? (
+                <EditCard 
+                  currentCard={currentCard}
+                  setEditing={setEditing}
+                  updateCard={updateCard}
+                />
+              ) : (
+              <AddCard addCard={addCard} />
+            )}
+            <CardTable cards={cards} deleteCard={deleteCard} editCard={editCard} />
 
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <footer>
+        <p>View this project on <a target="_blank" rel="noreferrer" href="https://github.com/SofPan/flashcards.git">GitHub</a></p>
+        <p>Return to <a target="_blank" rel="noreferrer" href="https://sofiapanchaud.com">sofiapanchaud.com</a></p>
+      </footer>
+    </>
   );
 }
 
