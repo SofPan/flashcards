@@ -13,6 +13,7 @@ const Card = (props) => {
             alert('there is no previous card');
             setCurrentCard(currentCard);
         } else {
+            setShowAnswer(false);
             props.showCard(newId);
         }
     }
@@ -24,6 +25,7 @@ const Card = (props) => {
             alert('there is no next card');
             setCurrentCard(currentCard);
         } else {
+            setShowAnswer(false);
             props.showCard(newId);
         }
     }
