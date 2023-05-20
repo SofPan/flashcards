@@ -11,3 +11,10 @@ tbody button{
 tbody p{
     font-size: 14px;
 }
+
+@media only screen and (max-width: 800px){
+    tbody button{
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
