@@ -45,7 +45,7 @@ function App() {
   }
 
   const showCard = (id) => {
-    setShowing(cardArr[id]);
+    setShowing(cards[id]);
   }
 
   return (
