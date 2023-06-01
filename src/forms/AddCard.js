@@ -11,10 +11,6 @@ const AddCard = (props) => {
         setCard({...card, [name]: value})
     }
 
-    // const handleClick = () => {
-    //     setNewCard(!newCard);
-    // }
-
     return(
         <>
         { newCard ? (
